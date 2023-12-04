@@ -1,31 +1,10 @@
-.feetback{
-    text-align: center;
-
-}
 .wrapper {
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 8px;
-gap: 16px;
-margin: 0 auto;
-margin-top: 20px;
-}
-.buttonGood{
-  padding: 12px;
-  background-color: green;
-  cursor: pointer;
-  border-radius: 20px;  
-}
-.buttonNeutral{
-    padding: 12px;
-    background-color: aqua;
-    cursor: pointer;
-    border-radius: 20px; 
-}
-.buttonBad{
-    padding: 12px;
-    background-color: red;
-    cursor: pointer;
-    border-radius: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  gap: 16px;
+  margin: 0 auto;
+  margin-top: 20px;
+  list-style: none;
 }
