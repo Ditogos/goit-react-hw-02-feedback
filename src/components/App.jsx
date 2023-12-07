@@ -7,12 +7,14 @@ import { Section } from './Section/Section';
 import { Statistic } from './Statistic/Statistic';
 
 export class App extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    };
+  }
   countTotalFeedback = () => {
     return this.state.good + this.state.neutral + this.state.bad;
   };
@@ -32,6 +34,7 @@ export class App extends Component {
     });
   };
   render() {
+    const totalFeedback = this.countTotalFeedback();
     return (
       <section className={css.wrapper}>
         <Section title="Please save feedback">
@@ -41,7 +44,7 @@ export class App extends Component {
           />
         </Section>
 
-        {this.countTotalFeedback() ? (
+        {totalFeedback ? (
           <Section title="Statistic">
             <Statistic
               good={this.state.good}
